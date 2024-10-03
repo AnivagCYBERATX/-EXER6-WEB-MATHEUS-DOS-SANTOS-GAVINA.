@@ -1,0 +1,19 @@
+function gerarLista() {
+    const numInput = document.getElementById('numInput').value;
+    const lista = document.getElementById('lista');
+    const mensagemErro = document.getElementById('mensagemErro');
+
+    lista.innerHTML = ''; // Limpa a lista
+    mensagemErro.textContent = ''; // Limpa a mensagem de erro
+
+    if (!numInput || numInput <= 0) {
+        mensagemErro.textContent = 'Por favor, insira um número válido';
+        return;
+    }
+
+    for (let i = 1; i <= numInput; i++) {
+        const item = document.createElement('li');
+        item.textContent = `${i}. Matheus Dos Santos Gavina`;
+        lista.appendChild(item);
+    }
+}
